@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llmplayground"
+version = "0.0.1"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain",
+    "openai",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.mypy]
+# strict = true
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+no_implicit_reexport = true
+strict_concatenate = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+addopts = [
+    "-rA",
+    "--import-mode=importlib",
+]
+filterwarnings = ["ignore::DeprecationWarning"]
+pythonpath = ["src"]
+testpaths = ["tests"]

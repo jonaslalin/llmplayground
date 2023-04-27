@@ -1,0 +1,22 @@
+name: langchain
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - black[jupyter]
+    - build
+    - coverage[toml]
+    - flake8
+    - flake8-bugbear
+    - flake8-comprehensions
+    - isort
+    - jupyter-client<8
+    - jupyterlab
+    - langchain
+    - mypy
+    - openai
+    - pep8-naming
+    - pytest
+    - pyzmq<25
