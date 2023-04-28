@@ -1,4 +1,4 @@
-name: langchain
+name: llmplayground
 channels:
   - conda-forge
 dependencies:
